@@ -1,44 +1,47 @@
-// Question-based tag system for TSA events
+// Tag system for TSA Event Recommender
+// Based on quiz questions to create personalized event recommendations
+
 export const TAGS = {
-  // Team Size (Question 2)
-  INDIVIDUAL: 'individual',
-  SMALL_TEAM: 'small_team',
-  LARGE_TEAM: 'large_team',
-  FLEXIBLE_SIZE: 'flexible_size',
-  
-  // Primary Activity Types (Question 3)
-  BUILDING_CONSTRUCTION: 'building_construction',
-  PROGRAMMING_TECHNOLOGY: 'programming_technology',
-  DESIGN_CREATIVE: 'design_creative',
-  RESEARCH_ANALYSIS: 'research_analysis',
-  PUBLIC_SPEAKING: 'public_speaking',
-  
-  // Secondary Skills (Question 4)
-  ENGINEERING_PROBLEM_SOLVING: 'engineering_problem_solving',
-  WRITING_DOCUMENTATION: 'writing_documentation',
-  MEDIA_PRODUCTION: 'media_production',
-  LEADERSHIP_ORGANIZATION: 'leadership_organization',
-  SCIENCE_INVESTIGATION: 'science_investigation',
-  
-  // Project Format (Question 5)
-  LONG_TERM_PORTFOLIO: 'long_term_portfolio',
-  PRESENTATION_DEMO: 'presentation_demo',
-  HANDS_ON_BUILDING: 'hands_on_building',
-  WRITTEN_TEST: 'written_test',
-  ONSITE_PROBLEM_SOLVING: 'onsite_problem_solving',
-  EARLY_SUBMISSION: 'early_submission',
-  
-  // Work Environment (Question 6)
-  TECHNICAL_PRECISE: 'technical_precise',
-  CREATIVE_ARTISTIC: 'creative_artistic',
-  COLLABORATIVE_SOCIAL: 'collaborative_social',
-  INDEPENDENT_FOCUSED: 'independent_focused',
-  
-  // Challenge Type (Question 7)
-  SOLVE_COMPLEX_PROBLEMS: 'solve_complex_problems',
-  CREATE_SOMETHING_NEW: 'create_something_new',
-  COMPETE_HEAD_TO_HEAD: 'compete_head_to_head',
-  DEMONSTRATE_KNOWLEDGE: 'demonstrate_knowledge'
+  // Team Size Preferences
+  INDIVIDUAL: "individual",
+  SMALL_TEAM: "small_team", 
+  LARGE_TEAM: "large_team",
+  ANY_TEAM_SIZE: "any_team_size",
+
+  // Activity Type Preferences  
+  HANDS_ON_BUILDING: "hands_on_building",
+  PROGRAMMING_TECHNOLOGY: "programming_technology", 
+  DESIGN_CREATIVE: "design_creative",
+  RESEARCH_ANALYSIS: "research_analysis",
+  PUBLIC_SPEAKING_PRESENTATIONS: "public_speaking_presentations",
+
+  // Topic Interest Areas
+  COMPUTER_SCIENCE: "computer_science",
+  ROBOTICS: "robotics",
+  ENGINEERING: "engineering",
+  ART_DESIGN: "art_design",
+  LEADERSHIP_PUBLIC_SPEAKING: "leadership_public_speaking",
+
+  // Project Task Preferences
+  BUILD_PROGRAM_ROBOT: "build_program_robot",
+  DESIGN_BRAND_MARKETING: "design_brand_marketing",
+  WRITE_SHOOT_FILM: "write_shoot_film", 
+  RESEARCH_WRITE_REPORT: "research_write_report",
+  PREPARE_DELIVER_SPEECH: "prepare_deliver_speech",
+
+  // Event Format Preferences
+  PRESENTATIONS_ONSITE: "presentations_onsite",
+  TESTS_EXAMS: "tests_exams",
+  RESEARCH_DOCUMENTATION: "research_documentation",
+  BUILDING_DROP_OFF: "building_drop_off",
+  DIGITAL_EARLY_SUBMISSION: "digital_early_submission",
+
+  // Community Role Preferences  
+  EVENT_COORDINATOR: "event_coordinator",
+  WORKSHOP_LEADER: "workshop_leader",
+  TECHNICAL_SUPPORT: "technical_support",
+  DOCUMENTATION_LEAD: "documentation_lead",
+  EVENT_HOST: "event_host",
 } as const;
 
 export type Tag = typeof TAGS[keyof typeof TAGS];

@@ -1,3 +1,5 @@
+import { TAGS } from "@/lib/tags";
+
 const demoEvent = {
     name: "",
     teamSize: "",
@@ -5,6 +7,7 @@ const demoEvent = {
     theme: ``,
     runningAtRegionals: true,
     qualifier: true,
+    tags: [] as string[],
 }
 
 export const highSchoolEvents = [
@@ -12,11 +15,12 @@ export const highSchoolEvents = [
         name: "Animatronics",
         teamSize: "2-3",
         description: "To address the annual design challenge, participants exhibit and demonstrate their knowledge of mechanical and control systems by creating an animatronic device with a specific purpose (i.e., communicate an idea, entertain, demonstrate a concept, etc.) that includes sound, lights, and an appropriate surrounding environment (a display).",
-        theme: ` “Time Travelers’ Museum”
+        theme: ` "Time Travelers' Museum"
 
 Design Problem: Create an animatronic figure or scene from a key moment in American history. The character should "come to life" to explain their world to a young audience. Designed for a children's museum or educational tour.`,
         runningAtRegionals: false,
         qualifier: false,
+        tags: [TAGS.SMALL_TEAM, TAGS.HANDS_ON_BUILDING, TAGS.PROGRAMMING_TECHNOLOGY, TAGS.ROBOTICS, TAGS.ENGINEERING, TAGS.BUILD_PROGRAM_ROBOT, TAGS.BUILDING_DROP_OFF, TAGS.TECHNICAL_SUPPORT],
     },
     {
         name: "Architectural Design",
@@ -25,14 +29,16 @@ Design Problem: Create an animatronic figure or scene from a key moment in Ameri
         theme: `Design Problem available at https://tsaweb.org/docs/default-source/competitions/themes-and-problems-2025-2026/2026-architectural-design-problem.pdf?sfvrsn=4af21af4_1`,
         runningAtRegionals: true,
         qualifier: true,
+        tags: [TAGS.LARGE_TEAM, TAGS.DESIGN_CREATIVE, TAGS.HANDS_ON_BUILDING, TAGS.ART_DESIGN, TAGS.ENGINEERING, TAGS.DESIGN_BRAND_MARKETING, TAGS.PRESENTATIONS_ONSITE, TAGS.WORKSHOP_LEADER],
     },
     {
         name: "Audio Podcasting",
         teamSize: "1-6",
         description: "Participants use digital audio technology to create original content for a podcast piece that addresses the annual theme. The podcast must feature high level storytelling techniques, voice acting, and folly sound effects; the full entry must include documentation of the podcast development process and elements. Semifinalists participate in an interview.",
-        theme: `Theme: “History or Mystery” Students create an audio podcast that focuses on a real-life or fictitious historical event from the past.`,
+        theme: `Theme: "History or Mystery" Students create an audio podcast that focuses on a real-life or fictitious historical event from the past.`,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.LARGE_TEAM, TAGS.DESIGN_CREATIVE, TAGS.ART_DESIGN, TAGS.WRITE_SHOOT_FILM, TAGS.DIGITAL_EARLY_SUBMISSION, TAGS.DOCUMENTATION_LEAD],
     },
     {
         name: "Biotechnology Design",
@@ -41,14 +47,16 @@ Design Problem: Create an animatronic figure or scene from a key moment in Ameri
         theme: `Topic: Topic: Bioconjugation. Bioconjugation is a biochemical technique that has been applied in various fields, such as medicine, diagnostics, biocatalysis, and materials. From chemical warfare to corrective eye surgery, the applications of bioconjugation are vast. Highlight the science behind bioconjugation and demonstrate one of its many uses.`,
         runningAtRegionals: true,
         qualifier: true,
+        tags: [TAGS.LARGE_TEAM, TAGS.RESEARCH_ANALYSIS, TAGS.ENGINEERING, TAGS.RESEARCH_WRITE_REPORT, TAGS.RESEARCH_DOCUMENTATION, TAGS.PRESENTATIONS_ONSITE],
     },
     {
         name: "Board Game Design",
         teamSize: "2-6",
-        description: "Participants develop, build, and package a board game that focuses on a subject of their choice. Creative packaging, and the instructions, pieces, and cards associated with the pilot game will be evaluated. Semifinalists set up the game, demonstrate how the game is played, explain the game’s features, and discuss the design process.",
+        description: "Participants develop, build, and package a board game that focuses on a subject of their choice. Creative packaging, and the instructions, pieces, and cards associated with the pilot game will be evaluated. Semifinalists set up the game, demonstrate how the game is played, explain the game's features, and discuss the design process.",
         theme: ``,
         runningAtRegionals: true,
         qualifier: true,
+        tags: [TAGS.LARGE_TEAM, TAGS.DESIGN_CREATIVE, TAGS.HANDS_ON_BUILDING, TAGS.ART_DESIGN, TAGS.DESIGN_BRAND_MARKETING, TAGS.BUILDING_DROP_OFF, TAGS.WORKSHOP_LEADER],
     },
     {
         name: "Chapter Team",
@@ -57,14 +65,16 @@ Design Problem: Create an animatronic figure or scene from a key moment in Ameri
         theme: ``,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.LARGE_TEAM, TAGS.PUBLIC_SPEAKING_PRESENTATIONS, TAGS.LEADERSHIP_PUBLIC_SPEAKING, TAGS.PREPARE_DELIVER_SPEECH, TAGS.TESTS_EXAMS, TAGS.EVENT_COORDINATOR],
     },
     {
         name: "Children's Stories",
         teamSize: "1-6",
-        description: "In response to the annual theme, participants create an illustrated children’s story of artistic, instructional, and social value, and submit documentation related to the development of the physical storybook. Semifinalists read their story aloud and participate in an interview.",
+        description: "In response to the annual theme, participants create an illustrated children's story of artistic, instructional, and social value, and submit documentation related to the development of the physical storybook. Semifinalists read their story aloud and participate in an interview.",
         theme: `Theme: Students develop and produce a non-fiction, die-cut board book`,
         runningAtRegionals: true,
         qualifier: true,
+        tags: [TAGS.LARGE_TEAM, TAGS.DESIGN_CREATIVE, TAGS.ART_DESIGN, TAGS.WRITE_SHOOT_FILM, TAGS.RESEARCH_DOCUMENTATION, TAGS.EVENT_HOST],
     },
     {
         name: "Coding",
@@ -83,6 +93,7 @@ Rust version 1.75
 Swift version 5.10`,
         runningAtRegionals: false,
         qualifier: false,
+        tags: [TAGS.SMALL_TEAM, TAGS.PROGRAMMING_TECHNOLOGY, TAGS.COMPUTER_SCIENCE, TAGS.BUILD_PROGRAM_ROBOT, TAGS.TESTS_EXAMS, TAGS.TECHNICAL_SUPPORT],
     },
     {
         name: "Computer-Aided Design (CAD), Architecture",
@@ -91,6 +102,7 @@ Swift version 5.10`,
         theme: ``,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.INDIVIDUAL, TAGS.DESIGN_CREATIVE, TAGS.PROGRAMMING_TECHNOLOGY, TAGS.ART_DESIGN, TAGS.ENGINEERING, TAGS.DESIGN_BRAND_MARKETING, TAGS.PRESENTATIONS_ONSITE],
     },
     {
         name: "Computer-Aided Design (CAD), Engineering",
@@ -99,6 +111,7 @@ Swift version 5.10`,
         theme: ``,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.INDIVIDUAL, TAGS.DESIGN_CREATIVE, TAGS.PROGRAMMING_TECHNOLOGY, TAGS.COMPUTER_SCIENCE, TAGS.ENGINEERING, TAGS.DESIGN_BRAND_MARKETING, TAGS.PRESENTATIONS_ONSITE],
     },
     {
         name: "Data Science and Analytics",
@@ -107,6 +120,7 @@ Swift version 5.10`,
         theme: `Theme: Identify and use a "Tourism"- related open-source data set for analysis and research. In the scientific poster, cite the source of the data, including the URL/domain and file format. A Scientific Poster Template is provided at https://tsaweb.org/competitions/themes-and-problems?hspage=1&mspage=2#dl0#dl1`,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.SMALL_TEAM, TAGS.RESEARCH_ANALYSIS, TAGS.COMPUTER_SCIENCE, TAGS.RESEARCH_WRITE_REPORT, TAGS.RESEARCH_DOCUMENTATION, TAGS.PRESENTATIONS_ONSITE],
     },
     {
         name: "Debating Technological Issues",
@@ -127,6 +141,7 @@ Subtopic 3: AI-generated art and literature diminish the value of human creativi
         theme: `Theme: “A Twist in Time” Create a story that alters a key historical moment—or imagines a character from the past suddenly appearing in the modern day.`,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.LARGE_TEAM, TAGS.DESIGN_CREATIVE, TAGS.ART_DESIGN, TAGS.WRITE_SHOOT_FILM, TAGS.DIGITAL_EARLY_SUBMISSION, TAGS.DOCUMENTATION_LEAD],
     },
     {
         name: "Dragster Design",
@@ -135,6 +150,7 @@ Subtopic 3: AI-generated art and literature diminish the value of human creativi
         theme: `No theme for 2026, see official rules for specifications`,
         runningAtRegionals: true,
         qualifier: true,
+        tags: [TAGS.INDIVIDUAL, TAGS.HANDS_ON_BUILDING, TAGS.DESIGN_CREATIVE, TAGS.ENGINEERING, TAGS.DESIGN_BRAND_MARKETING, TAGS.BUILDING_DROP_OFF],
     },
     {
         name: "Drone Challenge (UAV)",
@@ -175,6 +191,7 @@ Subtopic 3: AI-generated art and literature diminish the value of human creativi
         theme: ``,
         runningAtRegionals: true,
         qualifier: true,
+        tags: [TAGS.INDIVIDUAL, TAGS.HANDS_ON_BUILDING, TAGS.ENGINEERING, TAGS.BUILD_PROGRAM_ROBOT, TAGS.BUILDING_DROP_OFF, TAGS.TECHNICAL_SUPPORT],
     },
     {
         name: "Forensic Science",
@@ -205,10 +222,11 @@ Identify urban heat island (UHI) hotspots in your area using temperature, vegeta
     {
         name: "Manufacturing Prototype",
         teamSize: "2-6",
-        description: "Participants design, fabricate, and use Computer Integrated Manufacturing (CIM) to create a product that addresses the annual theme. A documentation portfolio and the completed product prototype are submitted for evaluation. Semifinalists give a product “sales pitch” and demonstration.",
+        description: "Participants design, fabricate, and use Computer Integrated Manufacturing (CIM) to create a product that addresses the annual theme. A documentation portfolio and the completed product prototype are submitted for evaluation. Semifinalists give a product \"sales pitch\" and demonstration.",
         theme: `Theme: Marble Maze or Puzzle Box`,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.LARGE_TEAM, TAGS.HANDS_ON_BUILDING, TAGS.PROGRAMMING_TECHNOLOGY, TAGS.ENGINEERING, TAGS.BUILD_PROGRAM_ROBOT, TAGS.BUILDING_DROP_OFF, TAGS.WORKSHOP_LEADER],
     },
     {
         name: "Music Production",
@@ -241,6 +259,7 @@ Identify urban heat island (UHI) hotspots in your area using temperature, vegeta
         theme: `Topic: Everyone knows the classic game of rock, paper, scissors: rock beats scissors, scissors beat paper, and paper beats rock. At the end of the day, which is the most revolutionary tool? Develop a presentation in which you select one of these three technologies/tools and describe its impact on human civilization.`,
         runningAtRegionals: true,
         qualifier: true,
+        tags: [TAGS.INDIVIDUAL, TAGS.PUBLIC_SPEAKING_PRESENTATIONS, TAGS.LEADERSHIP_PUBLIC_SPEAKING, TAGS.PREPARE_DELIVER_SPEECH, TAGS.PRESENTATIONS_ONSITE, TAGS.EVENT_HOST],
     },
     {
         name: "Promotional Design",
@@ -269,6 +288,7 @@ Address: 870 Trail Bend Road, Bluewater Heights, MD 21903`,
         theme: `Theme available at https://tsaweb.org/docs/default-source/competitions/themes-and-problems-2025-2026/2026-hs-robotics.pdf?sfvrsn=2849ac4c_1`,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.LARGE_TEAM, TAGS.HANDS_ON_BUILDING, TAGS.PROGRAMMING_TECHNOLOGY, TAGS.ROBOTICS, TAGS.ENGINEERING, TAGS.BUILD_PROGRAM_ROBOT, TAGS.BUILDING_DROP_OFF, TAGS.TECHNICAL_SUPPORT],
     },
     {
         name: "Senior Solar Sprint",
@@ -277,6 +297,7 @@ Address: 870 Trail Bend Road, Bluewater Heights, MD 21903`,
         theme: ``,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.SMALL_TEAM, TAGS.HANDS_ON_BUILDING, TAGS.ENGINEERING, TAGS.BUILD_PROGRAM_ROBOT, TAGS.BUILDING_DROP_OFF, TAGS.TECHNICAL_SUPPORT],
     },
     {
         name: "Software Development",
@@ -285,6 +306,7 @@ Address: 870 Trail Bend Road, Bluewater Heights, MD 21903`,
         theme: `Develop a software program that removes barriers and increases accessibility for people with vision or hearing disabilities.`,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.LARGE_TEAM, TAGS.PROGRAMMING_TECHNOLOGY, TAGS.COMPUTER_SCIENCE, TAGS.BUILD_PROGRAM_ROBOT, TAGS.DIGITAL_EARLY_SUBMISSION, TAGS.TECHNICAL_SUPPORT],
     },
     {
         name: "STEM Mass Media",
@@ -317,6 +339,7 @@ https://www.eurekalert.org/news-releases/1079999`,
         theme: ``,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.SMALL_TEAM, TAGS.HANDS_ON_BUILDING, TAGS.PROGRAMMING_TECHNOLOGY, TAGS.ROBOTICS, TAGS.ENGINEERING, TAGS.BUILD_PROGRAM_ROBOT, TAGS.PRESENTATIONS_ONSITE, TAGS.TECHNICAL_SUPPORT],
     },
     {
         name: "Technology Bowl",
@@ -333,6 +356,7 @@ https://www.eurekalert.org/news-releases/1079999`,
         theme: ``,
         runningAtRegionals: true,
         qualifier: true,
+        tags: [TAGS.SMALL_TEAM, TAGS.HANDS_ON_BUILDING, TAGS.ENGINEERING, TAGS.BUILD_PROGRAM_ROBOT, TAGS.PRESENTATIONS_ONSITE, TAGS.TECHNICAL_SUPPORT],
     },
     {
         name: "Transportation Modeling",
@@ -349,6 +373,7 @@ https://www.eurekalert.org/news-releases/1079999`,
         theme: `Theme: Retro Revival: Reimagine an 8-bit or 16-bit era type of game with a modern twist.`,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.LARGE_TEAM, TAGS.PROGRAMMING_TECHNOLOGY, TAGS.DESIGN_CREATIVE, TAGS.COMPUTER_SCIENCE, TAGS.BUILD_PROGRAM_ROBOT, TAGS.DIGITAL_EARLY_SUBMISSION, TAGS.TECHNICAL_SUPPORT],
     },
     {
         name: "Virtual Reality Simulation (VR)",
@@ -373,5 +398,6 @@ a form that users can submit to indicate new resources that should be added to t
 additional content to enhance the community resource hub for end users.`,
         runningAtRegionals: true,
         qualifier: true,
+        tags: [TAGS.LARGE_TEAM, TAGS.PROGRAMMING_TECHNOLOGY, TAGS.DESIGN_CREATIVE, TAGS.COMPUTER_SCIENCE, TAGS.BUILD_PROGRAM_ROBOT, TAGS.DIGITAL_EARLY_SUBMISSION, TAGS.TECHNICAL_SUPPORT],
     }
 ]

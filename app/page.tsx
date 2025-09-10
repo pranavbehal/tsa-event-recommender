@@ -22,21 +22,20 @@ export default function Home() {
 
   if (step === 'welcome') {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-white p-4">
-        <Card className="w-full max-w-2xl border-black">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
+        <Card className="w-full max-w-2xl soft-border bg-white shadow-sm">
           <CardHeader>
-            <CardTitle className="text-4xl font-bold text-center text-black">
+            <CardTitle className="text-3xl sm:text-4xl font-bold text-center text-gray-800">
               TSA Event Recommender
             </CardTitle>
           </CardHeader>
           <CardContent className="text-center space-y-6">
-            <p className="text-lg text-gray-700">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
               Find the perfect TSA events for you based on your interests and preferences.
             </p>
             <Button 
               onClick={() => setStep('level')} 
-              variant="outline" 
-              className="border-black text-black hover:bg-black hover:text-white"
+              className="bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200 px-8 py-3 text-base font-medium rounded-xl"
             >
               Get Started
             </Button>
@@ -48,39 +47,39 @@ export default function Home() {
 
   if (step === 'level') {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-white p-4">
-        <Card className="w-full max-w-2xl border-black">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
+        <Card className="w-full max-w-2xl soft-border bg-white shadow-sm">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-center text-black">
+            <CardTitle className="text-xl sm:text-2xl font-bold text-center text-gray-800">
               Tell us about yourself
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <Label className="text-lg font-semibold text-black mb-4 block">
+              <Label className="text-base sm:text-lg font-semibold text-gray-800 mb-4 block">
                 What grade level are you?
               </Label>
               <RadioGroup onValueChange={(value) => handleLevelSelect(value as 'middle' | 'high')}>
-                <div className="flex items-center space-x-2 p-4 border border-gray-300 rounded-lg hover:border-black transition-colors">
+                <div className="flex items-center space-x-2 p-4 soft-border rounded-lg hover:border-blue-300 transition-colors cursor-pointer">
                   <RadioGroupItem value="middle" id="middle" />
-                  <Label htmlFor="middle" className="text-lg cursor-pointer flex-grow">
+                  <Label htmlFor="middle" className="text-base sm:text-lg cursor-pointer flex-grow text-gray-700">
                     Middle School (6th-8th grade)
                   </Label>
                 </div>
-                <div className="flex items-center space-x-2 p-4 border border-gray-300 rounded-lg hover:border-black transition-colors">
+                <div className="flex items-center space-x-2 p-4 soft-border rounded-lg hover:border-blue-300 transition-colors cursor-pointer">
                   <RadioGroupItem value="high" id="high" />
-                  <Label htmlFor="high" className="text-lg cursor-pointer flex-grow">
+                  <Label htmlFor="high" className="text-base sm:text-lg cursor-pointer flex-grow text-gray-700">
                     High School (9th-12th grade)
                   </Label>
                 </div>
               </RadioGroup>
             </div>
 
-            <div className="flex items-center space-x-2 p-4 border border-gray-300 rounded-lg">
+            <div className="flex items-center space-x-2 p-4 soft-border rounded-lg">
               <Checkbox 
                 id="regionals" 
                 checked={regionalsOnly}
-                onCheckedChange={setRegionalsOnly}
+                onCheckedChange={(checked) => setRegionalsOnly(checked === true)}
               />
               <Label htmlFor="regionals" className="text-sm text-gray-600 cursor-pointer">
                 Only show events running at regionals (recommended)

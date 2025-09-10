@@ -1,3 +1,5 @@
+import { TAGS } from "@/lib/tags";
+
 export const middleSchoolEvents = [
     {
         name: "Audio Podcasting",
@@ -6,6 +8,7 @@ export const middleSchoolEvents = [
         theme: `Theme: Students create an audio podcast reviewing/promoting a vacation destination.`,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.LARGE_TEAM, TAGS.DESIGN_CREATIVE, TAGS.ART_DESIGN, TAGS.WRITE_SHOOT_FILM, TAGS.DIGITAL_EARLY_SUBMISSION, TAGS.DOCUMENTATION_LEAD],
     },
     {
         name: "Biotechnology",
@@ -16,6 +19,7 @@ export const middleSchoolEvents = [
 `,
         runningAtRegionals: true,
         qualifier: false,
+        tags: [TAGS.LARGE_TEAM, TAGS.RESEARCH_ANALYSIS, TAGS.ENGINEERING, TAGS.RESEARCH_WRITE_REPORT, TAGS.RESEARCH_DOCUMENTATION, TAGS.PRESENTATIONS_ONSITE],
     },
     {
         name: "Career Prep",
